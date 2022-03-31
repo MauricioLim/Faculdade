@@ -7,10 +7,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetUf_para_aceitar_estado_sc() {
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 3000);
-		
-		//ACT
-		c.setUf("SC");
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 3000);
 		
 		//ASSSERT
 		assertEquals("SC", c.getUf());
@@ -19,10 +16,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetUf_para_aceitar_estado_pr() {
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","PR", 3000);
-		
-		//ACT
-		c.setUf("PR");
+		Contribuinte c = new Contribuinte("Jo√£o", "123","PR", 3000);
 		
 		//ASSSERT
 		assertEquals("PR", c.getUf());
@@ -31,10 +25,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetUf_para_aceitar_estado_RS() {
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","RS", 3000);
-		
-		//ACT
-		c.setUf("RS");
+		Contribuinte c = new Contribuinte("Jo√£o", "123","RS", 3000);
 		
 		//ASSSERT
 		assertEquals("RS", c.getUf());
@@ -43,7 +34,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetUf_para_aceitar_estado_SP() {
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 3000);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 3000);
 		
 		//ACT
 		c.setUf("SP");
@@ -55,7 +46,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetUf_para_aceitar_estado_RJ() {
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 3000);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 3000);
 		
 		//ACT
 		c.setUf("RJ");
@@ -67,7 +58,7 @@ class ContribuinteTeste {
 	@Test
 	void testSetRendaAnual_teste_para_renda_negativa() {
 		//ARRANGE
-				Contribuinte c = new Contribuinte("Jo„o", "123","SC", 3000);
+				Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 3000);
 				
 				//ACT
 				c.setRendaAnual(-818.5);
@@ -78,9 +69,9 @@ class ContribuinteTeste {
 
 	@Test
 	void testCalcularImposto_para_uma_renda_de_3000() {
-		//PADR√O PARA TESTES
+		//PADR√ÉO PARA TESTES
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 3000);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 3000);
 		
 		//ACT
 		double imposto = c.calcularImposto();
@@ -91,9 +82,9 @@ class ContribuinteTeste {
 	
 	@Test
 	void testCalcularImposto_para_uma_renda_de_9000() {
-		//PADR√O PARA TESTES
+		//PADR√ÉO PARA TESTES
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 9000);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 9000);
 		
 		//ACT
 		double imposto = c.calcularImposto();
@@ -104,9 +95,9 @@ class ContribuinteTeste {
 	
 	@Test
 	void testCalcularImposto_para_uma_renda_de_10000() {
-		//PADR√O PARA TESTES
+		//PADR√ÉO PARA TESTES
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 10000);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 10000);
 		
 		//ACT
 		double imposto = c.calcularImposto();
@@ -117,9 +108,9 @@ class ContribuinteTeste {
 	
 	@Test
 	void testCalcularImposto_para_uma_renda_de_30000() {
-		//PADR√O PARA TESTES
+		//PADR√ÉO PARA TESTES
 		//ARRANGE
-		Contribuinte c = new Contribuinte("Jo„o", "123","SC", 34911.73);
+		Contribuinte c = new Contribuinte("Jo√£o", "123","SC", 34911.73);
 		
 		//ACT
 		double imposto = c.calcularImposto();
