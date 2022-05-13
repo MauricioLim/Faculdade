@@ -9,6 +9,9 @@ public abstract class Aluno {
 		this.setNome(nome);
 		this.setDataNascimento(data);
 	}
+	
+	protected void finalize() throws Throwable(){
+	}
 
 	//METODOS GET
 	public String getNome() {
