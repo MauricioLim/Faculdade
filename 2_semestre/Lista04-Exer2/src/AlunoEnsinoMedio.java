@@ -16,7 +16,7 @@ public class AlunoEnsinoMedio extends Aluno{
 
 	//METODO SET
 	public void setAno(int ano) throws Exception {
-		if(ano == 1 || ano == 2 || ano == 3) {
+		if(ano > 0 && ano < 4) {
 			this.ano = ano;
 		} else {
 			throw new Exception("Formado invalido");
