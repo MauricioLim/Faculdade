@@ -21,10 +21,13 @@ public class AlunoUniversitario extends Aluno{
 			this.formaIngresso = formaIngresso;
 		} else {
 			throw new IllegalArgumentsException("Formato de ingressão invalida");
-		}
-			
-		
+		}	
 	}
+	
+	public void setCurso(Curso curso){
+		if(curso != null){
+			this.curso = curso;
+		}
 
 	public String getStringFormaIngresso() {
 		String forma = "";
