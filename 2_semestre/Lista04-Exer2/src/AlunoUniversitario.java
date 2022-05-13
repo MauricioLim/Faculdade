@@ -5,7 +5,7 @@ public class AlunoUniversitario extends Aluno{
 	private char formaIngresso;
 	private Curso curso;
 	
-	public AlunoUniversitario(String nome, LocalDate data, char ingresso) throws Exception {
+	public AlunoUniversitario(String nome, LocalDate data, char ingresso)  {
 		super(nome, data);
 	}
 
@@ -15,12 +15,12 @@ public class AlunoUniversitario extends Aluno{
 		return formaIngresso;
 	}
 
-	public void setFormaIngresso(char formaIngresso) throws Exception {
+	public void setFormaIngresso(char formaIngresso){
 		Character.toUpperCase(formaIngresso);
 		if(formaIngresso == 'V' || formaIngresso == 'E' || formaIngresso == 'S' ||  formaIngresso == 'T' || formaIngresso == 'I') {
 			this.formaIngresso = formaIngresso;
 		} else {
-			throw new Exception("Formato de ingress„o invalida");
+			throw new IllegalArgumentsException("Formato de ingress√£o invalida");
 		}
 			
 		
@@ -49,7 +49,7 @@ public class AlunoUniversitario extends Aluno{
 	@Override
 	String mostrar() {
 		
-		return (this.getNome() + " È aluno universitario do curso " + this.curso.getSigla() + " - " + this.curso.getNome() + ", ingressado por " + this.getStringFormaIngresso());
+		return (this.getNome() + " √© aluno universitario do curso " + this.curso.getSigla() + " - " + this.curso.getNome() + ", ingressado por " + this.getStringFormaIngresso());
 	}
 
 }
