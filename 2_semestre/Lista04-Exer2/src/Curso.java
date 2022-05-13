@@ -8,17 +8,21 @@ public class Curso {
 		this.setNome(nome);
 		this.setSigla(sigla);
 	}
+	
+	@Override
+	protected void finalize() throws Throwable{
+	}
 
 	public String getSigla() {
 		return sigla;
 	}
 
-	public void setSigla(String sigla) throws Exception {
+	public void setSigla(String sigla) {
 		
 		if(sigla.length() == 3) {
 			this.sigla = sigla;
 		} else {
-			throw new Exception("Quantidade de letras invalida");
+			throw new IllegalArgumentException("Quantidade de letras invalida");
 		}
 	}
 
@@ -26,12 +30,12 @@ public class Curso {
 		return nome;
 	}
 
-	public void setNome(String nome) throws Exception {
+	public void setNome(String nome) {
 		
 		if(nome.length() >= 5) {
 			this.nome = nome;
 		} else {
-			throw new Exception("Formato de nome invalido");
+			throw new IllegalArgumentException("Formato de nome invalido");
 		}
 	}
 
